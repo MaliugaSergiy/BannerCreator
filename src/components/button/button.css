@@ -1,0 +1,196 @@
+.ButtonDeprecated {
+  outline: none;
+  padding: 15px 24px;
+  letter-spacing: 0.8px;
+  line-height: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s linear;
+  border: 1px solid #fed835;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  font-family: inherit;
+}
+
+.ButtonDeprecated:hover {
+  color: #444952;
+  background-color: #fed835;
+}
+
+.ButtonDeprecated:active {
+  background-color: rgba(196, 161, 47, 0.7);
+  color: #444952;
+}
+
+.ButtonDeprecated:focus {
+  box-shadow: 0 0 0 5px rgba(254, 216, 53, 0.4);
+}
+.ButtonDeprecated--inline {
+  width: auto;
+  display: inline-block;
+}
+
+.ButtonDeprecated--primary {
+  border-color: #fed835;
+  background-color: #fed835;
+  color: #444952;
+}
+
+.ButtonDeprecated--primary:hover {
+  background-color: rgba(254, 216, 53, 0.7);
+  color: #444952;
+}
+
+.ButtonDeprecated--primary:active {
+  background-color: rgba(196, 161, 47, 0.7);
+  color: #444952;
+}
+
+.ButtonDeprecated--primary:focus {
+  box-shadow: 0 0 0 5px rgba(254, 216, 53, 0.4);
+}
+.ButtonDeprecated--smallIndent {
+  padding: 10px 18px;
+}
+
+.ButtonDeprecated--accent {
+  background-color: #e95959;
+  border-color: #e95959;
+  color: #fff;
+  font-weight: 300;
+}
+
+.ButtonDeprecated--accent:hover {
+  background-color: rgba(233, 89, 89, 0.7);
+  color: #fff;
+}
+
+.ButtonDeprecated--accent:active {
+  background-color: rgba(181, 23, 23, 0.6);
+  color: #fff;
+}
+
+.ButtonDeprecated--accent:focus {
+  box-shadow: 0 0 0 5px rgba(233, 89, 89, 0.4);
+}
+
+.ButtonDeprecated--inverted {
+  border-color: #fff;
+  background-color: #fff;
+  color: #444952;
+}
+
+.ButtonDeprecated--inverted:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+.ButtonDeprecated--inverted:active {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+
+.ButtonDeprecated--inverted:focus {
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.ButtonDeprecated-title {
+  /* empty */
+}
+.ButtonDeprecated--round {
+  width: auto;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #444952;
+  border-color: #d1d5da;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.ButtonDeprecated--round:hover,
+.ButtonDeprecated--round:active,
+.ButtonDeprecated--round:focus {
+  color: #000;
+  border-color: transparent;
+}
+
+.ButtonDeprecated-icon {
+  padding-right: 8px;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+}
+.ButtonDeprecated--round .ButtonDeprecated-icon {
+  padding: 0;
+}
+
+.ButtonDeprecated--sorting {
+  display: inline-block;
+  width: auto;
+  padding: 10px 30px;
+}
+
+.ButtonDeprecated--secondary {
+  border-color: #d1d5da;
+  background-color: #fff;
+  color: #d1d5da;
+}
+.ButtonDeprecated--smaller {
+  font-size: 12px;
+  font-weight: 300;
+}
+.ButtonDeprecated--biggerIcon {
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+}
+
+.ButtonDeprecated--biggerIcon .ButtonDeprecated-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.ButtonDeprecated--noBorder {
+  border-color: transparent;
+}
+
+.ButtonDeprecated--vk:hover {
+  background-color: #4e7cb0;
+  color: #fff;
+}
+
+.ButtonDeprecated--vk:active {
+  background-color: rgba(78, 124, 176, 0.7);
+}
+.ButtonDeprecated--vk:focus {
+  box-shadow: 0 0 0 5px rgba(78, 124, 176, 0.4);
+}
+.ButtonDeprecated--facebook:hover {
+  background-color: #4267b2;
+  color: #fff;
+}
+.ButtonDeprecated--facebook:active {
+  background-color: rgba(66, 103, 178, 0.7);
+}
+.ButtonDeprecated--facebook:focus {
+  box-shadow: 0 0 0 5px rgba(66, 103, 178, 0.4);
+}
+.ButtonDeprecated--instagram:hover {
+  background-color: #d10869;
+  color: #fff;
+}
+.ButtonDeprecated--instagram:active {
+  background-color: rgba(209, 8, 105, 0.7);
+}
+.ButtonDeprecated--instagram:focus {
+  box-shadow: 0 0 0 5px rgba(209, 8, 105, 0.4);
+}

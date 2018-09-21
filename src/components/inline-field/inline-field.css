@@ -1,0 +1,23 @@
+.InlineField {
+  cursor: default;
+}
+
+.InlineField-label {
+  display: inline-block;
+  margin-right: 32px;
+  vertical-align: middle;
+}
+
+.InlineField-instance {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.InlineField-error {
+  display: inline-block;
+  margin-left: 16px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #ff0000;
+  letter-spacing: 0.8px;
+}

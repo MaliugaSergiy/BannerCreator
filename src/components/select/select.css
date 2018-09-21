@@ -1,0 +1,26 @@
+.Select {
+  appearance: none;
+  background-color: #fff;
+  background-image: url(assets/icons/arrow-down.svg);
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) center;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: inherit;
+  padding: 8px 32px;
+  padding-right: 48px;
+  box-sizing: border-box;
+  border: 1px solid #d4dae3;
+  height: inherit;
+  border-radius: inherit;
+  width: 100%;
+  text-decoration: none;
+  border-radius: 40px;
+}
+.Select--listing {
+  padding: 0;
+  border: none;
+  min-width: 210px;
+}

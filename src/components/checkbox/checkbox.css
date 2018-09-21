@@ -1,0 +1,88 @@
+.Checkbox {
+  line-height: 1;
+}
+
+.Checkbox--disabled {
+  opacity: 0.8;
+}
+
+.Checkbox-wrapper {
+  vertical-align: middle;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.Checkbox--disabled .Checkbox-wrapper {
+  cursor: default;
+}
+
+.Checkbox-el {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.Checkbox-mark {
+  flex: 0 0 auto;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #d4dae3;
+  border-radius: 2px;
+  box-sizing: border-box;
+  position: relative;
+  transition: border 0.2s ease-out, background-color 0.2s ease-out;
+  margin-right: 12px;
+}
+
+.Checkbox-mark::after {
+  content: '';
+  width: 6px;
+  height: 12px;
+  box-sizing: border-box;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -8px;
+  margin-left: -3px;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.Checkbox-el:checked + .Checkbox-mark {
+  border: 1px solid #ffd500;
+  background-color: #ffd500;
+}
+
+.Checkbox-el:checked + .Checkbox-mark::after {
+  opacity: 1;
+}
+
+.Checkbox-el:focus + .Checkbox-mark {
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px rgba(47, 124, 192, 0.54);
+}
+
+.Checkbox-label {
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 0.6px;
+}
+
+/* .Checkbox-el:disabled + .Checkbox-mark {
+  border: 1px solid #c7c9d6;
+  background-color: transparent;
+} */
+/* 
+.Checkbox-el:disabled + .Checkbox-mark::after {
+  border: 1px solid #c7c9d6;
+  background-color: transparent;
+} */

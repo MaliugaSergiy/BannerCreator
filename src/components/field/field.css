@@ -1,0 +1,64 @@
+.Field {
+  position: relative;
+  cursor: default;
+}
+
+.Field-labelRow {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  left: 0;
+  top: -32px;
+  padding: 0 8px;
+}
+
+.Field-label {
+  color: #797979;
+}
+
+.Field-instance {
+}
+
+.Field-meta {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 4px;
+  padding-left: 8px;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.8px;
+}
+
+.Field-exampleList {
+  height: 1.5em;
+  height: 1.5;
+  overflow: hidden;
+  color: #797979;
+}
+
+.Field-exampleItem {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.Field-wordItroduction {
+  display: inline-block;
+  padding-right: 12px;
+  vertical-align: top;
+}
+
+.Field-wordSeparator {
+  display: inline-block;
+  padding: 0 12px;
+  vertical-align: top;
+}
+
+.Field-error {
+  color: #ff0000;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.8px;
+}

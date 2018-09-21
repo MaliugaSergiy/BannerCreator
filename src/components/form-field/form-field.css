@@ -1,0 +1,14 @@
+.FormField {
+  height: 50px;
+  border-radius: calc(50px / 2);
+  line-height: calc(50px - 16px);
+}
+
+.FormField--textarea {
+  border-radius: 0;
+  line-height: 0;
+}
+
+.FormField--noFix {
+  height: auto;
+}

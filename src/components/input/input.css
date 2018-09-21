@@ -1,0 +1,124 @@
+.Input {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.Input--focused {
+}
+
+.Input-field {
+  appearance: none;
+  outline: none;
+  display: inline-block;
+  width: 100%;
+  padding: 16px 32px;
+  line-height: 16px;
+  font-size: 14px;
+  border: 1px solid #dfe3ea;
+  border-radius: 25px;
+  color: #262931;
+  letter-spacing: 0.4px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.Input-field:focus {
+  border-color: #444952;
+}
+
+.Input-field:disabled {
+  cursor: default;
+  background-color: #fafafa;
+  color: #999999;
+}
+
+.Input--focused .Input-field {
+  border-color: #444952;
+}
+
+.Input-button {
+  padding: 4px;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translate(-50%, -50%);
+}
+
+.Input-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: top;
+}
+
+.Input--small {
+}
+
+.Input--small .Input-field {
+  padding: 11px 24px;
+  border-radius: 20px;
+}
+
+.Input--small .Input-button {
+  right: 4px;
+}
+
+.Input--small .Input-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.Input--error .Input-field {
+  color: #e74a5a;
+  border-color: #e74a5a;
+}
+
+.Input-prepended,
+.Input-appended {
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  top: 0;
+}
+
+.Input-prepended {
+  left: 0;
+}
+
+.Input-appended {
+  right: 0;
+}
+
+.Input--small .Input-prepended,
+.Input--small .Input-appended {
+  width: 40px;
+  height: 40px;
+}
+
+.Input--withLeftGap .Input-field {
+  padding-left: 50px;
+}
+
+.Input--small.Input--withLeftGap .Input-field {
+  padding-left: 40px;
+}
+
+.Input--withRightGap .Input-field {
+  padding-right: 50px;
+}
+
+.Input--small.Input--withRightGap .Input-field {
+  padding-right: 40px;
+}
+
+.Input--selectable {
+  cursor: default;
+}

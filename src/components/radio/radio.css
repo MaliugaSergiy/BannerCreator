@@ -1,0 +1,74 @@
+.Radio {
+}
+
+.Radio--disabled {
+  opacity: 0.8;
+}
+
+.Radio-wrapper {
+  cursor: pointer;
+  display: inline-flex;
+  color: inherit;
+  align-items: flex-start;
+  vertical-align: middle;
+}
+
+.Radio--disabled .Radio-wrapper {
+  cursor: default;
+}
+
+.Radio-el {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.Radio-mark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  max-width: 20px;
+  border-radius: 10px;
+  border: 1px solid #d4dae3;
+  box-sizing: border-box;
+  position: relative;
+  transition: border 0.1s ease-out;
+  margin-right: 12px;
+}
+
+.Radio-mark::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -4px;
+  transform: scale(2.2);
+  background-color: #fff;
+  transition-property: transform, opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.Radio-el:checked + .Radio-mark {
+  background-color: #ffd12c;
+  border-color: #ffd12c;
+}
+
+.Radio-el:checked + .Radio-mark::after {
+  transform: scale(1);
+}
+
+.Radio-label {
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 0.6px;
+}

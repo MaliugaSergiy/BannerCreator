@@ -1,0 +1,59 @@
+.LeftLabeledField {
+  cursor: default;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.LeftLabeledField--size-small {
+}
+
+.LeftLabeledField-labelHolder {
+  flex: 0 0 150px;
+  max-width: 150px;
+  margin-right: 16px;
+  line-height: 50px;
+}
+
+@media (max-width: 840px) {
+  .LeftLabeledField-labelHolder {
+    position: absolute;
+    left: 0;
+    top: -32px;
+    line-height: inherit;
+    padding-left: 8px;
+  }
+}
+
+.LeftLabeledField--size-small .LeftLabeledField-labelHolder {
+  line-height: 40px;
+}
+
+.LeftLabeledField-label {
+  display: inline-block;
+  line-height: 1.5;
+  color: #797979;
+  vertical-align: middle;
+}
+
+.LeftLabeledField--size-inline .LeftLabeledField-labelHolder {
+  line-height: inherit;
+}
+
+.LeftLabeledField--size-choice .LeftLabeledField-labelHolder {
+  line-height: 20px;
+}
+
+.LeftLabeledField-instance {
+  flex: 1 1 auto;
+}
+
+.LeftLabeledField-error {
+  flex: 0 1 auto;
+  max-width: 600px;
+  margin-left: 16px;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.8px;
+  color: #ff0000;
+}

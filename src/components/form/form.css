@@ -1,0 +1,93 @@
+.Form {
+}
+
+.Form-row {
+  margin-bottom: 24px;
+  padding-top: 16px;
+}
+
+.Form-row:first-child {
+  padding-top: 0;
+}
+
+.Form-row:last-child {
+  margin-bottom: 0;
+}
+
+.Form-row--noLabelGap {
+  padding-top: 0;
+}
+
+.Form-row--labelTop {
+  padding-top: 32px;
+}
+
+.Form-row:last-child {
+  margin-bottom: 0;
+}
+
+.Form-row--labelTop:last-child {
+  margin-bottom: 0;
+}
+
+.Form-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  margin: 0;
+  margin-bottom: 48px;
+}
+
+.Form-smalTitle {
+  text-align: left;
+}
+
+.Form-labeledRow {
+  margin-bottom: 24px;
+  padding-top: 40px;
+}
+
+@media (max-width: 640px) {
+  .Form-labeledRow {
+    margin-bottom: 8px;
+  }
+}
+
+.Form-labeledRow:last-child {
+  margin-bottom: 0;
+}
+
+.Form-actionRow {
+  margin-bottom: 24px;
+  padding-top: 24px;
+}
+
+@media (max-width: 640px) {
+  .Form-actionRow {
+    margin-bottom: 8px;
+    padding-top: 16px;
+  }
+}
+
+.Form-actionRow:last-child {
+  margin-bottom: 0;
+}
+
+.Form-leftLabeledRow {
+  margin-bottom: 24px;
+  padding-top: 16px;
+}
+
+@media (max-width: 840px) {
+  .Form-leftLabeledRow {
+    margin-bottom: 24px;
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .Form-leftLabeledRow {
+    margin-bottom: 8px;
+  }
+}

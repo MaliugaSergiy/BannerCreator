@@ -1,0 +1,50 @@
+.FormGroup {
+  margin: -8px;
+  display: flex;
+  align-items: center;
+}
+
+.FormGroup--right {
+  justify-content: flex-end;
+}
+
+.FormGroup--center {
+  justify-content: center;
+}
+
+.FormGroup--vertical-center {
+  align-items: center;
+}
+
+.FormGroup-item {
+  padding: 8px;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  color: #444952;
+}
+
+.FormGroup--half .FormGroup-item {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+@media screen and (max-width: 520px) {
+  .FormGroup--half {
+    flex-wrap: wrap;
+  }
+  .FormGroup--half .FormGroup-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.FormGroup--third .FormGroup-item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+}
+
+.FormGroup-itemWide {
+  padding: 8px;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+}

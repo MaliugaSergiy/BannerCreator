@@ -1,0 +1,78 @@
+.PromoCode {
+  padding: 12px 40px;
+  border-radius: 25px;
+  border: 1px dotted #262931;
+  box-sizing: content-box;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.PromoCode--inverted {
+  border: 1px dotted #fff;
+  color: #fff;
+}
+
+.PromoCode--onOverlay {
+  border: 1px dotted #fff;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.PromoCode--onOverlay::before {
+  content: '';
+  display: block;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  color: inherit;
+  background-color: currentColor;
+  opacity: 0.4;
+}
+
+.PromoCode--size-small {
+  padding: 12px 26px;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+}
+
+.PromoCode-holder {
+  display: flex;
+  line-height: 24px;
+  position: relative;
+}
+
+.PromoCode--size-small .PromoCode-holder {
+  line-height: 14px;
+}
+
+.PromoCode-title {
+  margin-right: 8px;
+  user-select: none;
+}
+
+.PromoCode--onOverlay .PromoCode-title {
+  color: #fff;
+}
+
+.PromoCode-input {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  color: inherit;
+}
+
+.PromoCode--onOverlay .PromoCode-input {
+  color: #ffd12c;
+}
+
+.PromoCode--inverted .PromoCode-input {
+}

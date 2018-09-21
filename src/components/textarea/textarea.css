@@ -1,0 +1,50 @@
+.Textarea {
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 170px;
+  padding: 14px 24px;
+  border: 1px solid #dfe3ea;
+  line-height: 20px;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+  letter-spacing: 0.7px;
+  color: #262931;
+  transition: height 0.2s ease-out;
+  vertical-align: top;
+}
+
+.Textarea:focus {
+  height: 170px;
+  border-color: #444952;
+}
+
+.Textarea:disabled {
+  cursor: default;
+  background-color: #fafafa;
+  color: #999999;
+}
+
+.Textarea ::placeholder {
+  color: #a1a6af;
+}
+
+.Textarea--empty {
+  height: 50px;
+  min-height: 50px;
+}
+
+.Textarea--autosize {
+  min-height: 50px;
+  height: 50px;
+  overflow: hidden;
+  transition: none;
+}
+
+.Textarea--opened {
+  transition: none;
+  min-height: 170px;
+}
