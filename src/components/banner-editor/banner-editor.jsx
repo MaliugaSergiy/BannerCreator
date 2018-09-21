@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import FileBase64 from 'react-file-base64';
+
 import Form from './../form/form';
 import LeftLabeledField from './../left-labeled-field/left-labeled-field';
 import Input from './../input/input';
@@ -7,15 +8,28 @@ import Checkbox from './../checkbox/checkbox';
 import Container from '../container/container';
 
 import isFunction from '../../utils/is-function';
+import Button from '../button/button';
 
 class BannerEditor extends Component {
   render() {
-    const { banner, promo, withOverlay, themeColor } = this.props;
+    const {
+      banner,
+      promo,
+      withOverlay,
+      themeColor,
+      onImageAccept
+    } = this.props;
 
     return (
       <div className="banner-editor">
         <Container>
           <Form>
+            <Form.LeftLabeledRow>
+              <LeftLabeledField label="Изображение" size="small">
+                <input type="file" onChange={onImageAccept} />
+              </LeftLabeledField>
+            </Form.LeftLabeledRow>
+
             <Form.LeftLabeledRow>
               <LeftLabeledField label="Лейбл баннера" size="small">
                 <Input
@@ -67,7 +81,7 @@ class BannerEditor extends Component {
             </Form.LeftLabeledRow>
 
             <Form.LeftLabeledRow>
-              <LeftLabeledField label="With overlay" size="small">
+              <LeftLabeledField label="With overlay" size="inline">
                 <Checkbox
                   label="Задать подложку"
                   name="With_overlay"
@@ -156,6 +170,16 @@ class BannerEditor extends Component {
       return;
     }
     onOverlayColorChange(value);
+  };
+
+  handleGetFiles = file => {
+    const { onGetFiles } = this.props;
+    const { base64 } = file;
+
+    if (!isFunction(onGetFiles)) {
+      return;
+    }
+    onGetFiles(base64);
   };
 }
 
