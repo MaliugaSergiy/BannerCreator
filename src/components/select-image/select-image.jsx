@@ -7,7 +7,7 @@ import './select-image.css';
 
 class SelectImage extends Component {
   state = {
-    selectedFileName: null
+    selectedFileName: ''
   };
 
   inputElement = null;
@@ -53,6 +53,11 @@ class SelectImage extends Component {
 
   handleImageChange = e => {
     const { onImageAccept } = this.props;
+
+    if (e.target.files.length === 0) {
+      return;
+    }
+
     const { name } = e.target.files[0];
 
     if (!isFunction(onImageAccept)) {
