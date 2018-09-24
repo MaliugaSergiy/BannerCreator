@@ -1,3 +1,7 @@
+.BannerEditor {
+  padding-top: 60px;
+}
+
 .BannerEditor-background {
   display: flex;
   align-items: center;

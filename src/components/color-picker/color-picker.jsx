@@ -7,7 +7,7 @@ import invert from 'invert-color';
 
 import isFunction from '../../utils/is-function';
 
-import './coor-picker.css';
+import './color-picker.css';
 
 const ESC_KEY = 27;
 
@@ -58,7 +58,7 @@ class CoorPicker extends Component {
     });
   }
 
-  cencelChoice() {
+  cancelChoice() {
     const { onChange } = this.props;
     const { currentColor } = this.state;
 
@@ -116,7 +116,7 @@ class CoorPicker extends Component {
     if (keyCode !== ESC_KEY) {
       return;
     }
-    this.cencelChoice();
+    this.cancelChoice();
     this.hidePicker();
   };
 
