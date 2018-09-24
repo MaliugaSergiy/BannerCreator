@@ -40,7 +40,7 @@ class BannerEditor extends Component {
       <div className="BannerEditor">
         <Container>
           <Form>
-            <Form.Row>
+            <Form.LabeledRow>
               <FormGroup>
                 <FormGroupItem>
                   <Field label="Изображение фона" size="small">
@@ -66,9 +66,9 @@ class BannerEditor extends Component {
                   </FormGroupItem>
                 )}
               </FormGroup>
-            </Form.Row>
+            </Form.LabeledRow>
 
-            <Form.Row>
+            <Form.LabeledRow>
               <Field label="Заголовок баннера" size="small">
                 <Input
                   value={banner.title}
@@ -76,9 +76,9 @@ class BannerEditor extends Component {
                   onChange={this.handelTitleChange}
                 />
               </Field>
-            </Form.Row>
+            </Form.LabeledRow>
 
-            <Form.Row>
+            <Form.LabeledRow>
               <FormGroup>
                 <FormGroupItem>
                   <Field label="Лейбл баннера" size="small">
@@ -108,8 +108,8 @@ class BannerEditor extends Component {
                   </Field>
                 </FormGroupItem>
               </FormGroup>
-            </Form.Row>
-            <Form.Row>
+            </Form.LabeledRow>
+            <Form.LabeledRow>
               <Field label="Описание баннера" size="small">
                 <TextArea
                   value={banner.description}
@@ -118,11 +118,10 @@ class BannerEditor extends Component {
                   autosize
                 />
               </Field>
-            </Form.Row>
-            <Form.Row>
+            </Form.LabeledRow>
+            <Form.LabeledRow>
               <FormGroup>
                 <FormGroupItem>
-                  {' '}
                   <InlineField label="Выравнивание:">
                     <FieldsetChoice inline>
                       {ALIGN_OPTIONS.map(option => (
@@ -161,7 +160,7 @@ class BannerEditor extends Component {
                   </InlineField>
                 </FormGroupItem>
               </FormGroup>
-            </Form.Row>
+            </Form.LabeledRow>
           </Form>
         </Container>
       </div>

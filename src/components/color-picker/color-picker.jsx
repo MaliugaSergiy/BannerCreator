@@ -11,7 +11,9 @@ import './color-picker.css';
 
 const ESC_KEY = 27;
 
-class CoorPicker extends Component {
+const DEFAULT_COLOR = '#262931';
+
+class ColorPicker extends Component {
   state = { colorPickerShow: false, currentColor: '' };
 
   static propTypes = {
@@ -27,9 +29,9 @@ class CoorPicker extends Component {
     const { themeColor } = this.props;
 
     return (
-      <div className="CoorPicker">
+      <div className="ColorPicker">
         <button
-          className="CoorPicker-button"
+          className="ColorPicker-button"
           type="button"
           onClick={this.handlePickerTrigger}
           style={{
@@ -39,8 +41,25 @@ class CoorPicker extends Component {
         >
           {themeColor}
         </button>
+        <div className="ColorPicker-info">
+          {themeColor === DEFAULT_COLOR ? (
+            '(цвет по умолчанию)'
+          ) : (
+            <button
+              className="ColorPicker-resetButton"
+              type="button"
+              onClick={this.handleReset}
+              style={{
+                backgroundColor: DEFAULT_COLOR,
+                color: invert(DEFAULT_COLOR, true)
+              }}
+            >
+              Reset to default
+            </button>
+          )}
+        </div>
         {colorPickerShow && (
-          <div className="CoorPicker-choice" ref={this.setChoiceElementRef}>
+          <div className="ColorPicker-choice" ref={this.setChoiceElementRef}>
             <SketchPicker
               color={themeColor}
               onChangeComplete={this.handleChange}
@@ -86,6 +105,15 @@ class CoorPicker extends Component {
     if (!element) return;
 
     this._choiceElement = element;
+  };
+
+  handleReset = () => {
+    const { onChange } = this.props;
+
+    if (!isFunction(onChange)) {
+      return;
+    }
+    onChange(DEFAULT_COLOR);
   };
 
   handlePickerTrigger = e => {
@@ -135,4 +163,4 @@ class CoorPicker extends Component {
   };
 }
 
-export default CoorPicker;
+export default ColorPicker;

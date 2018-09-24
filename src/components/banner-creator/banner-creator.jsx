@@ -16,6 +16,8 @@ class BannerCreator extends Component {
       ...rest
     } = this.props;
 
+    
+
     const parameters = { banner, align, theme, withOverlay, themeColor, promo };
 
     return (
