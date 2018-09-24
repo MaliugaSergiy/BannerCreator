@@ -1,0 +1,18 @@
+.FieldsetChoice {
+  border: none;
+  margin: -4px;
+  padding: 0;
+}
+
+.FieldsetChoice--inline {
+  margin: -16px;
+}
+
+.FieldsetChoice-item {
+  padding: 4px;
+}
+
+.FieldsetChoice--inline .FieldsetChoice-item {
+  display: inline-block;
+  padding: 16px;
+}

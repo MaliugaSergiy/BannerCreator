@@ -31,6 +31,8 @@ class BannerCreatorContainer extends Component {
         onOverlayColorChange={this.handleOverlayColorChange}
         onGetFiles={this.handleGetFiles}
         onImageAccept={this.handleImageAccept}
+        onAlignChange = {this.handleAlignChange}
+        onThemeChange = {this.handleThemeChange}
       />
     );
   }
@@ -74,11 +76,20 @@ class BannerCreatorContainer extends Component {
   handleImageAccept = e => {
     const file = e.target.files[0];
 
-    console.log(file);
 
     const image = URL.createObjectURL(file);
     this.setState(state => ({ banner: { ...state.banner, image } }));
   };
+
+  handleAlignChange =(e)=> {
+    const {value} = e.target;
+    this.setState({align:value});
+  }
+
+  handleThemeChange =(e)=> {
+    const {value} = e.target;
+    this.setState({theme:value});
+  }
 }
 
 export default BannerCreatorContainer;
