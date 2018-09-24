@@ -16,14 +16,19 @@ class SelectImage extends Component {
     const { selectedFileName } = this.state;
     return (
       <div className="SelectImage">
-        <Button
-          title={
-            !selectedFileName ? 'Выбрать файл' : 'Выбрать другое изображение'
-          }
-          variant="primary"
-          size="small"
-          onClick={this.handleClick}
-        />
+        <div className="SelectImage-button">
+          <Button
+            title={
+              !selectedFileName ? 'Выбрать файл' : 'Выбрать другое изображение'
+            }
+            variant="primary"
+            size="small"
+            onClick={this.handleClick}
+          />
+          {selectedFileName && (
+            <span className="SelectImage-fileName">{selectedFileName}</span>
+          )}
+        </div>
 
         <input
           className="SelectImage-input"

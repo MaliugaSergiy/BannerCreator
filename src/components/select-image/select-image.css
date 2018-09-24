@@ -12,3 +12,11 @@
   padding: 0;
   border: 0;
 }
+
+.SelectImage-button {
+  display: flex;
+  align-items: flex-end;
+}
+.SelectImage-fileName {
+  padding: 0 8px;
+}
