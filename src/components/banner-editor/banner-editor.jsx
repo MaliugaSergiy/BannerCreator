@@ -120,38 +120,47 @@ class BannerEditor extends Component {
               </Field>
             </Form.Row>
             <Form.Row>
-              <InlineField label="Выравнивание">
-                <FieldsetChoice inline>
-                  {ALIGN_OPTIONS.map(option => (
-                    <FieldsetChoiceItem key={option}>
-                      <Radio
-                        label={`${option[0].toUpperCase()}${option.slice(1)}`}
-                        name="align"
-                        value={option}
-                        checked={align === option}
-                        onChange={onAlignChange}
-                      />
-                    </FieldsetChoiceItem>
-                  ))}
-                </FieldsetChoice>
-              </InlineField>
-            </Form.Row>
-            <Form.Row>
-              <InlineField label="Тема">
-                <FieldsetChoice inline>
-                  {THEME_OPTIONS.map(option => (
-                    <FieldsetChoiceItem key={option}>
-                      <Radio
-                        label={`${option[0].toUpperCase()}${option.slice(1)}`}
-                        name="theme"
-                        value={option}
-                        checked={theme === option}
-                        onChange={onThemeChange}
-                      />
-                    </FieldsetChoiceItem>
-                  ))}
-                </FieldsetChoice>
-              </InlineField>
+              <FormGroup>
+                <FormGroupItem>
+                  {' '}
+                  <InlineField label="Выравнивание:">
+                    <FieldsetChoice inline>
+                      {ALIGN_OPTIONS.map(option => (
+                        <FieldsetChoiceItem key={option}>
+                          <Radio
+                            label={`${option[0].toUpperCase()}${option.slice(
+                              1
+                            )}`}
+                            name="align"
+                            value={option}
+                            checked={align === option}
+                            onChange={onAlignChange}
+                          />
+                        </FieldsetChoiceItem>
+                      ))}
+                    </FieldsetChoice>
+                  </InlineField>
+                </FormGroupItem>
+                <FormGroupItem>
+                  <InlineField label="Тема:">
+                    <FieldsetChoice inline>
+                      {THEME_OPTIONS.map(option => (
+                        <FieldsetChoiceItem key={option}>
+                          <Radio
+                            label={`${option[0].toUpperCase()}${option.slice(
+                              1
+                            )}`}
+                            name="theme"
+                            value={option}
+                            checked={theme === option}
+                            onChange={onThemeChange}
+                          />
+                        </FieldsetChoiceItem>
+                      ))}
+                    </FieldsetChoice>
+                  </InlineField>
+                </FormGroupItem>
+              </FormGroup>
             </Form.Row>
           </Form>
         </Container>
