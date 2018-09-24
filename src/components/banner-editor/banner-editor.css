@@ -1,0 +1,21 @@
+.BannerEditor-background {
+  display: flex;
+  align-items: center;
+}
+
+.BannerEditor-backgroundSelect {
+  margin-right: 16px;
+}
+
+.BannerEditor-choiceColor {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.BannerEditor-setColor {
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+}

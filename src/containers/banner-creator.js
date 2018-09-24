@@ -74,6 +74,8 @@ class BannerCreatorContainer extends Component {
   handleImageAccept = e => {
     const file = e.target.files[0];
 
+    console.log(file);
+
     const image = URL.createObjectURL(file);
     this.setState(state => ({ banner: { ...state.banner, image } }));
   };

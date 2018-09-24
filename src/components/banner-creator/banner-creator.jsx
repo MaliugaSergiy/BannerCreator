@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Banner from '../banner/banner';
 import BannerEditor from '../banner-editor/banner-editor';
 
+import './banner-creator.css';
+
 class BannerCreator extends Component {
   render() {
     const {

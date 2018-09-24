@@ -1,0 +1,11 @@
+.BannerCreator {
+}
+
+.BannerCreator-render {
+  position: relative;
+}
+
+.BannerCreator-editor {
+  position: relative;
+  z-index: 2;
+}

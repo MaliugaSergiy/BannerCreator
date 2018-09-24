@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import FileBase64 from 'react-file-base64';
 
 import Form from './../form/form';
 import LeftLabeledField from './../left-labeled-field/left-labeled-field';
 import Input from './../input/input';
 import Checkbox from './../checkbox/checkbox';
 import Container from '../container/container';
-
+import ColorPicker from '../coor-picker/coor-picker';
 import isFunction from '../../utils/is-function';
-import Button from '../button/button';
+import SelectImage from '../select-image/select-image';
+
+import './banner-editor.css';
 
 class BannerEditor extends Component {
   render() {
@@ -17,16 +18,38 @@ class BannerEditor extends Component {
       promo,
       withOverlay,
       themeColor,
-      onImageAccept
+      onImageAccept,
+      onOverlayColorChange,
+      onOverlayChange
     } = this.props;
 
     return (
-      <div className="banner-editor">
+      <div className="BannerEditor">
         <Container>
           <Form>
             <Form.LeftLabeledRow>
-              <LeftLabeledField label="Изображение" size="small">
-                <input type="file" onChange={onImageAccept} />
+              <LeftLabeledField label="Изображение и подложка" size="small">
+                <div className="BannerEditor-background">
+                  <div className="BannerEditor-backgroundSelect">
+                    <SelectImage onImageAccept={onImageAccept} />
+                  </div>
+                  <div className="BannerEditor-choiceColor">
+                    <Checkbox
+                      label="Задать подложку"
+                      name="With_overlay"
+                      checked={withOverlay}
+                      onChange={onOverlayChange}
+                    />
+                    {withOverlay && (
+                      <div className="BannerEditor-setColor">
+                        <ColorPicker
+                          onChange={onOverlayColorChange}
+                          themeColor={themeColor}
+                        />
+                      </div>
+                    )}
+                  </div>
+                </div>
               </LeftLabeledField>
             </Form.LeftLabeledRow>
 
@@ -79,28 +102,6 @@ class BannerEditor extends Component {
                 />
               </LeftLabeledField>
             </Form.LeftLabeledRow>
-
-            <Form.LeftLabeledRow>
-              <LeftLabeledField label="With overlay" size="inline">
-                <Checkbox
-                  label="Задать подложку"
-                  name="With_overlay"
-                  checked={withOverlay}
-                  onChange={this.handleOverlayChange}
-                />
-              </LeftLabeledField>
-            </Form.LeftLabeledRow>
-            {withOverlay && (
-              <Form.LeftLabeledRow>
-                <LeftLabeledField label="Цвет подложки" size="small">
-                  <input
-                    type="color"
-                    onChange={this.handleOverlayColorChange}
-                    value={themeColor}
-                  />
-                </LeftLabeledField>
-              </Form.LeftLabeledRow>
-            )}
           </Form>
         </Container>
       </div>
@@ -157,11 +158,6 @@ class BannerEditor extends Component {
     onPromoTextChange(value);
   };
 
-  handleOverlayChange = () => {
-    const { onOverlayChange } = this.props;
-    onOverlayChange();
-  };
-
   handleOverlayColorChange = e => {
     const { onOverlayColorChange } = this.props;
     const { value } = e.target;
@@ -172,17 +168,15 @@ class BannerEditor extends Component {
     onOverlayColorChange(value);
   };
 
-  handleGetFiles = file => {
-    const { onGetFiles } = this.props;
-    const { base64 } = file;
+  handleOverlayColorPickerChange = color => {
+    const { onOverlayColorChange } = this.props;
+    const { hex } = color;
 
-    if (!isFunction(onGetFiles)) {
+    if (!isFunction(onOverlayColorChange)) {
       return;
     }
-    onGetFiles(base64);
+    onOverlayColorChange(hex);
   };
 }
-
-BannerEditor.propTypes = {};
 
 export default BannerEditor;

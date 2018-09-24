@@ -1,0 +1,19 @@
+.CoorPicker {
+  position: relative;
+  display: inline-block;
+}
+
+.CoorPicker-button {
+  padding: 8px 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  width: 100px;
+  outline: none;
+  cursor: pointer;
+}
+
+.CoorPicker-choice {
+  position: absolute;
+  left: 100%;
+  bottom: 100%;
+}
